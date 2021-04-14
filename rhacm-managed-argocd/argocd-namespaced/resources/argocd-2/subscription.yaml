@@ -6,7 +6,7 @@ metadata:
     app: argocd-2
   annotations:
     apps.open-cluster-management.io/github-path: rhacm-managed-argocd/argocd-namespaced/helm
-    apps.open-cluster-management.io/github-branch: main
+    apps.open-cluster-management.io/github-branch: cntk
 spec:
   channel: managed-argocd-namespaced/managed-argocd-namespaced
   placement:
