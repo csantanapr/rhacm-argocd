@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: rhacm-instance
-  namespace: argocd
+  namespace: openshift-gitops
 spec:
   source:
     path: rhacm-deploy/rhacm-instance/overlays/ha

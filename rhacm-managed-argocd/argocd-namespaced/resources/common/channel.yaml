@@ -6,4 +6,4 @@ metadata:
   namespace: managed-argocd-namespaced
 spec:
   type: GitHub
-  pathname: https://github.com/sabre1041/rhacm-argocd.git
+  pathname: https://github.com/csantanapr/rhacm-argocd.git
