@@ -19,6 +19,13 @@ This scenario makes use of Argo CD to deploy a Managed Hub of Red Hat Advanced C
 
 If a Argo CD instance is not already available, the following steps will provision one in the same cluster that will be designated to be the Red Hat Advanced Cluster Management for Kubernetes Hub cluster.
 
+Experimental:
+Depoy ArgoCD 2.0
+```
+oc apply -k rhacm-deploy/argocd-2/base/
+```
+
+
 First, deploy the Argo CD Operator
 
 ```
@@ -63,7 +70,7 @@ The associated policies will be provisioned on the Hub cluster and target manage
 Execute the following command to apply the `Subscription` to the Hub cluster
 
 ```
-$ oc apply -k rhacm-managed-argocd/argocd-cluster/subscription/ 
+$ oc apply -k rhacm-managed-argocd/argocd-cluster/subscription/
 ```
 
 In a few moments, Argo CD will be provisioned on all clusters with the label `argocd=true`.
@@ -83,7 +90,7 @@ The associated configurations will deploy a deploy resources to remote clusters 
 Execute the following command to apply the resources to the Hub cluster
 
 ```
-$ oc apply -k rhacm-managed-argocd/argocd-namespaced/resources/ 
+$ oc apply -k rhacm-managed-argocd/argocd-namespaced/resources/
 ```
 
 The following namespaces will be provisioned on the target cluster(s):
