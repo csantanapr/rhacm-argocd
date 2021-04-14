@@ -38,6 +38,11 @@ Next, deploy Argo CD.
 $ oc apply -k rhacm-deploy/argocd/base/
 ```
 
+Get the argocd `admin` password
+```
+oc extract -n openshift-gitops secret/argocd-initial-admin-secret --keys=password --to=-
+```
+
 #### Deploy Red Hat Advanced Cluster Management for Kubernetes
 
 Once Argo CD is available, create an Argo CD Application to deploy Red Hat Advanced Cluster Management for Kubernetes Hub cluster.
